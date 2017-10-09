@@ -43,6 +43,8 @@
                 </div>
                 <div class="panel-body"  >
                     <form role="form"   action="{{ route('login') }}"  method="post">
+                        {{ csrf_field() }}
+
                         <fieldset>
                             <div class="form-group">
                                 <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
@@ -56,7 +58,10 @@
                                 </label>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
-                            <a href="" class="btn btn-lg btn-success btn-block">Login</a>
+                            <div class="form-group">
+                                <input type="submit" name="btn" value="Login" class="btn btn-success btn-block"/>
+                            </div>
+
                         </fieldset>
                     </form>
                 </div>
